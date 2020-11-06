@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>604</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout" stretch="8,57,5,30">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="header">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(69, 69, 69)</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="title_label">
+             <property name="styleSheet">
+              <string notr="true">font: 63 14pt &quot;Open Sans SemiBold&quot;;
+color: rgb(232, 232, 232);</string>
+             </property>
+             <property name="text">
+              <string>Road Damage Recognition</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="main_screen">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(21, 21, 21);
+color: rgb(232, 232, 232);</string>
+        </property>
+        <property name="text">
+         <string>No Video</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="info_frame">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(29, 29, 29);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>2</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>2</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>1</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QHBoxLayout" name="horizontalLayout" stretch="40,10,50,0">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="source_label">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(232, 232, 232);
+font: 7pt &quot;Open Sans&quot;;</string>
+             </property>
+             <property name="text">
+              <string>No Video</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="dimension_label">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(232, 232, 232);
+font: 7pt &quot;Open Sans&quot;;</string>
+             </property>
+             <property name="text">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QProgressBar" name="progressBar">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(232, 232, 232);
+font: 7pt &quot;Open Sans&quot;;</string>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="invertedAppearance">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="runButton">
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Run</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoDefault">
+              <bool>false</bool>
+             </property>
+             <property name="default">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="main_frame">
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(48, 48, 48);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QVBoxLayout" name="main_Vlayout" stretch="10,90">
+           <item>
+            <layout class="QHBoxLayout" name="title_Hlayout">
+             <item>
+              <widget class="QLabel" name="source_title">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Source Video</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="prop_title">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(232, 232, 232);
+ border: 1px white;
+font: 8pt &quot;Open Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Properties</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="stat_title">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Statistic</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="main_Hlayout" stretch="30,5,30,5,30,0">
+             <item>
+              <widget class="QLabel" name="source_screen">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;
+background-color: rgb(29, 29, 29);</string>
+               </property>
+               <property name="text">
+                <string>No Video</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line_1">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="properties_frame">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <item row="1" column="0">
+                 <layout class="QVBoxLayout" name="properties_VLayout">
+                  <property name="spacing">
+                   <number>10</number>
+                  </property>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_8">
+                    <item>
+                     <widget class="QLabel" name="weightLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Weight</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QComboBox" name="weightCombobox">
+                      <property name="styleSheet">
+                       <string notr="true">QListView
+{
+background-color : white;
+}
+QComboBox::drop-down{
+
+	subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+	
+	
+	background-color:rgb(232, 232, 232);
+    border-left-width: 1px;
+    border-left-color: gray;
+    border-left-style: solid; /* just a single line */
+    border-right-width: 1px;
+    border-right-color: gray;
+    border-right-style: solid; /* just a single line */
+    border-bottom-width: 1px;
+    border-bottom-color: gray;
+    border-bottom-style: solid; /* just a single line */
+    
+
+
+
+
+}
+QComboBox::down-arrow{
+	image: url(Resources/down-arrow.png);
+    width: 8px;
+    height: 8px;
+}
+QComboBox {
+selection-background-color:rgb(232, 232, 232);
+selection-color: rgb(0, 0, 0);
+border : 1px solid rgb(232, 232, 232);
+background :rgb(49,49,49);
+color:rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;}
+</string>
+                      </property>
+                      <property name="frame">
+                       <bool>true</bool>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>416 x 416</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>512 x 512</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="conf_HLayout" stretch="25,25,25,25">
+                    <item>
+                     <widget class="QLabel" name="objthreshLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Obj
+Thresh:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="objthreshSpinbox">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="value">
+                       <double>30.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="nmsLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>NMS
+Thresh:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="nmsthreshSpinbox">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="value">
+                       <double>50.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="25,25,25,25">
+                    <item>
+                     <widget class="QLabel" name="maxdisappearedLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Max Dis
+appeared:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="maxdiasppearedSpinbox">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="value">
+                       <double>2.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="centroidthreshLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font:8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Centroid
+Thresh:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QDoubleSpinBox" name="centroidthreshSpinbox">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="decimals">
+                       <number>0</number>
+                      </property>
+                      <property name="maximum">
+                       <double>9999.000000000000000</double>
+                      </property>
+                      <property name="value">
+                       <double>70.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="counter_line_HLayout" stretch="20,20,20,20">
+                    <item>
+                     <widget class="QLabel" name="counterlineLabel">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>ROI</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                      <item>
+                       <widget class="QLabel" name="counterLabel">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="text">
+                         <string>Counter</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="counterlineSpinbox">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="minimum">
+                         <double>0.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>1.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.010000000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_6">
+                      <item>
+                       <widget class="QLabel" name="toplineLabel">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="text">
+                         <string>Top Line</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="toplineSpinbox">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="maximum">
+                         <double>1.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.010000000000000</double>
+                        </property>
+                        <property name="value">
+                         <double>0.500000000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_5">
+                      <item>
+                       <widget class="QLabel" name="buttomlineLabel">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="text">
+                         <string>Bottom Line</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QDoubleSpinBox" name="bottomlineSpinbox">
+                        <property name="styleSheet">
+                         <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                        </property>
+                        <property name="minimum">
+                         <double>0.000000000000000</double>
+                        </property>
+                        <property name="maximum">
+                         <double>1.000000000000000</double>
+                        </property>
+                        <property name="singleStep">
+                         <double>0.010000000000000</double>
+                        </property>
+                        <property name="value">
+                         <double>0.500000000000000</double>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="button_HLayout"/>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="frame">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout_2">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                    <item>
+                     <widget class="QLabel" name="pothole_label">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Pothole</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="pothole_count">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                    <item>
+                     <widget class="QLabel" name="alligator_label">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Alligator Crack</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="alligator_count">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_5">
+                    <item>
+                     <widget class="QLabel" name="linear_label">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Linear Crack</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="linear_count">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QLabel" name="longitudinal_label">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>Longitudinal Crack</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLabel" name="longitudinal_count">
+                      <property name="styleSheet">
+                       <string notr="true">color: rgb(232, 232, 232);
+font: 8pt &quot;Open Sans&quot;;</string>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_loadVideo"/>
+    <addaction name="separator"/>
+    <addaction name="action_About"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <action name="action_loadVideo">
+   <property name="text">
+    <string>Load Video</string>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

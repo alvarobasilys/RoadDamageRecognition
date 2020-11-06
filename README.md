@@ -1,5 +1,6 @@
 # RoadDamageRecognition
-Recognizing road damage from a video
 ---
+Recognizing road damage from a video
+
 This is my final project program for finish my undergraduate study
-![](https://imgur.com/a/YWw1Dje)
+![](https://media.giphy.com/media/QU9QPtcYYbJGqXRjh1/giphy.gif)

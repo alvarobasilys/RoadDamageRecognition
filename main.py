@@ -167,6 +167,7 @@ class main(QMainWindow):
             self.ui.nmsthreshSpinbox.setEnabled(True)
             self.ui.maxdiasppearedSpinbox.setEnabled(True)
             self.ui.centroidthreshSpinbox.setEnabled(True)
+            self.draw_counterLine()
             self.ui.runButton.setEnabled(True)
 
         else:
